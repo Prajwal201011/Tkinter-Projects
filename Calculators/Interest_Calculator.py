@@ -10,19 +10,11 @@ def cal():
     Rate = int(r.get())
     amt = (princip*Term*Rate)/100
     amtl = CTkLabel(interest, text=f"Amount is: {amt}")
-    amtl.pack(pady= 15)
+    amtl.pack(pady= 15)    
     
-    def clear():
-        amtl.delete(0, 'end')
-        
-    btnc = CTkButton(interest, text="Clear", fg_color="#1dc444", command=clear())
-    btnc.pack(padx=5, pady=5)
-    
-        
-
 HEAD = CTkLabel(app, text="Calculators", font=("Helvetica", 28), text_color="#1dc444")
 HEAD.pack(pady=10)
-
+#----------------------  TABS -------------------------------------------
 tabv = CTkTabview(app)
 tabv.pack(padx=20, pady=20)
 
@@ -48,5 +40,6 @@ r.pack(padx=10, pady=10)
 
 btn = CTkButton(interest, text="Calculate", fg_color="#1dc444", command=cal)
 btn.pack(pady=10)
+#-------------------------------------------------------------------------
 
 app.mainloop()
