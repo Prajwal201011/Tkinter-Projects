@@ -19,7 +19,7 @@ tabv = CTkTabview(app)
 tabv.pack(padx=20, pady=20)
 
 interest = tabv.add("Interest")
-area = tabv.add("Area")
+speed = tabv.add("Speed")
 #------------------------------------
 tvalue = StringVar()
 pvalue = StringVar()
@@ -41,5 +41,7 @@ r.pack(padx=10, pady=10)
 btn = CTkButton(interest, text="Calculate", fg_color="#1dc444", command=cal)
 btn.pack(pady=10)
 #-------------------------------------------------------------------------
+CTKLabel(speed, text="Speed")
+
 
 app.mainloop()
